@@ -23,7 +23,7 @@ services:
     command: bash start_jobs
     volumes:
       - .:/SecretSanta
-      - box
+      - box:/box
 
   app:
     depends_on:
