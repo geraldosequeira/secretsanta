@@ -35,7 +35,7 @@ services:
       - "3000:3000"
     volumes:
       - .:/SecretSanta
-      - box
+      - box:/box
   
   box:
     image: "busybox"

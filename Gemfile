@@ -29,6 +29,7 @@ gem 'material_icons'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
+  gem 'rspec-rails', '~> 3.5' 
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
@@ -40,9 +41,8 @@ group :development do
 end
 
 group :test do
-  gem 'capybara', '>= 2.15', '< 4.0'
-  gem 'selenium-webdriver'
-  gem 'chromedriver-helper'
+  gem "factory_bot_rails"
+  gem "ffaker"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
