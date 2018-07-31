@@ -7,14 +7,12 @@ default: &default
 
 development:
   <<: *default
-  database: SecretSanta_development
+  database: secret_santa_development
 
 test:
   <<: *default
-  database: SecretSanta_test
+  database: secret_santa_test
 
 production:
   <<: *default
-  database: SecretSanta_production
-  username: SecretSanta
-  password: <%= ENV['SECRETSANTA_DATABASE_PASSWORD'] %>
+  database: secret_santa_production
