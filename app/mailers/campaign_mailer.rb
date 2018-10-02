@@ -1,8 +1,11 @@
 class CampaignMailer < ApplicationMailer
 
-  def raffle
-    @greeting = "Hi"
+  def raffle(campaign, member, friend)
+    @campaign = campaign
+    @member = member
+    @friend = friend
 
-    mail to: "to@example.org"
+    mail to: @member.email, 
+    subject: "Nosso amigo secreto: #{@campaign.title}"
   end
 end
