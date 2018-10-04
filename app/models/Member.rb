@@ -1,5 +1,5 @@
 class Member < ApplicationRecord
-    belongs_to :campaing
+    belongs_to :campaign
 
     validates :name, :email, :campaign, presence: true
 
