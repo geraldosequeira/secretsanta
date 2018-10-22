@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe CampaignsController, type: :controller do
-  include Devise::Test::ControllerHelpers
+    include Devise::Test::ControllerHelpers
 
     before(:each) do
         @request.env["devise.mapping"] = Devise.mappings[:user]
@@ -47,11 +47,12 @@ RSpec.describe CampaignsController, type: :controller do
     describe "POST create" do
         before(:each) do
             @campaign_attributes = attributes_for(:campaign, user: @current_user)
-            post :create, params: {campaign: @campaign_attributes}
+            post :create, params: {}
         end
 
         it "Redirect to new campaign" do
-            expect(response).to have_http_status(302)
+            redirect = 302
+            expect(response).to have_http_status(redirect)
             expect(response).to redirect_to campaign_path(Campaign.last.id)
         end
 
@@ -73,7 +74,7 @@ RSpec.describe CampaignsController, type: :controller do
             request.env["HTTP_ACCEPT"] = 'application/json'
         end
 
-        context "User is the Campaign Owner" do
+        context "User is the campaign owner" do
             it "returns http success" do
                 campaign = create(:campaign, user: @current_user)
                 delete :destroy, params: {id: campaign.id}
@@ -81,7 +82,7 @@ RSpec.describe CampaignsController, type: :controller do
             end
         end
 
-        context "User isn't the Campaign Owner" do
+        context "User isn't the campaign owner" do
             it "returns http forbidden" do
                 campaign = create(:campaign)
                 delete :destroy, params: {id: campaign.id}
@@ -96,7 +97,7 @@ RSpec.describe CampaignsController, type: :controller do
             request.env["HTTP_ACCEPT"] = 'application/json'
         end
 
-        context "User is the Campaign Owner" do
+        context "User is the campaign owner" do
             before(:each) do
                 campaign = create(:campaign, user: @current_user)
                 put :update, params: {id: campaign.id, campaign: @new_campaign_attributes}
@@ -112,7 +113,7 @@ RSpec.describe CampaignsController, type: :controller do
             end
         end
 
-        context "User isn't the Campaign Owner" do
+        context "User isn't the campaign Owner" do
             it "returns http forbidden" do
                 campaign = create(:campaign)
                 put :update, params: {id: campaign.id, campaign: @new_campaign_attributes}

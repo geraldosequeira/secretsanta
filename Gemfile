@@ -23,7 +23,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5' 
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem "pry-meta"
+  gem "awesome_print"
 end
 
 group :development do
