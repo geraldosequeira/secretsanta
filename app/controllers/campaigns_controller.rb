@@ -14,12 +14,11 @@ class CampaignsController < ApplicationController
   
     def create
       @campaign = Campaign.new(user: current_user, title: 'Nova Campanha', description: 'Descreva sua campanha!')
-  
       respond_to do |format|
         if @campaign.save
-            format.html {redirect_to campaign_path(@campaign.id)}
+          format.html {redirect_to campaign_path(@campaign.id)}
         else
-            format.html {redirect_to main_app.root_url, notice: @campaign.errors}
+           format.html {redirect_to main_app.root_url, notice: @campaign.errors}
         end
       end
     end
