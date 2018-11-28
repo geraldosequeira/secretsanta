@@ -32,10 +32,11 @@ class CampaignsController < ApplicationController
     end
   
     def destroy
-      @campaign.destroy
-  
-      respond_to do |format|
-        format.json { render json: true }
+      if @campaign.destroy
+        render json: true
+        redirect_to root_path
+      else
+        render json: @campaign.errors, status: :unprocessable_entity
       end
     end
   
@@ -57,7 +58,7 @@ class CampaignsController < ApplicationController
     end
   
     def campaign_params
-      params.require(:campaign).permit(:title, :description, :event_date, :event_hour, :locale).merge(user: current_user)
+      params.require(:campaign).permit(:title, :description, :event_date, :event_hour, :lacation).merge(user: current_user)
     end
   
     def is_owner?
