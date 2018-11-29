@@ -1,12 +1,10 @@
 $(document).on('ready turbolinks:load', function(){
-    $('.update_campaign input').bind('blur', function(e){
-        if(e.target.name != 'campaign[event_date]'){
-            $('.update_campaign').submit();
-        }
+
+    $('.update_campaign input').bind('change', function(e){
+        $('.update_campaign').submit();
     });
 
     $('.update_campaign').on('submit', function(e){
-        
         $.ajax({
             type: "PUT",
             dataType: "json",

@@ -14,8 +14,8 @@ $(document).on('ready turbolinks:load', function() {
             selectYears: 5,
         },
         container: 'body',
-        minDate: new Date(),
-        onOpen: function(){$('.update_campaign').submit();}
+        minDate: new Date()
+        //onClose: function(){$('.update_campaign').submit();}
     });
 });
 
@@ -33,12 +33,12 @@ $(document).on('ready turbolinks:load', function() {
     });
 });
 
-$(document).on('ready turbolinks:load', function() {
-    $('.datepicker').on( 'keyup', function(e) {
-        $('.datepicker').click();
-    } );
+// $(document).on('ready turbolinks:load', function() {
+//     $('.datepicker').on( 'keyup', function(e) {
+//         $('.datepicker').click();
+//     } );
 
-    $('.timepicker').on( 'keyup', function(e) {
-        $('.timepicker').click();
-    } );
-});
+//     $('.timepicker').on( 'keyup', function(e) {
+//         $('.timepicker').click();
+//     } );
+// });
