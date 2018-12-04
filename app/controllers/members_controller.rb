@@ -8,14 +8,18 @@ class MembersController < ApplicationController
 
     def create
         @member = Member.new(member_params)
+        
         if @member.save
-            render json: true
+            render json: @member
         else
             render json: @member.errors, status: :unprocessable_entity
         end
     end
 
     def update
+        p member_params
+
+        p @member
         if @member.update(member_params)
             render json: true
         else
@@ -36,7 +40,7 @@ class MembersController < ApplicationController
 
     private 
 
-    def set_member 
+    def set_member
         @member = Member.find(params[:id])
     end
 
@@ -44,7 +48,7 @@ class MembersController < ApplicationController
         @member = Member.find_by!(token: params[:token])
       end
 
-    def member_params 
+    def member_params
         params.require(:member).permit(:name, :email, :campaign_id)
     end
 

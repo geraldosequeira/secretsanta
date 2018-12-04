@@ -15,7 +15,6 @@ $(document).on('ready turbolinks:load', function() {
         },
         container: 'body',
         minDate: new Date()
-        //onClose: function(){$('.update_campaign').submit();}
     });
 });
 

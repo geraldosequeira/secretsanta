@@ -3,7 +3,7 @@ class Member < ApplicationRecord
 
     validates :name, :email, :campaign, presence: true
 
-    after_save :set_campaign_pending
+    after_destroy :set_campaign_pending
 
     def set_pixel
         self.open = false
@@ -13,7 +13,6 @@ class Member < ApplicationRecord
         end
         self.save!
     end
-    
 
     protected
     def set_campaign_pending
