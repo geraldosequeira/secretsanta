@@ -1,4 +1,4 @@
-$(document).on('ready turbolinks:load', function(){
+$(document).on('ready', function(){
 
     $('.update_campaign input').bind('change', function(e){
         $('.update_campaign').submit();

@@ -1,4 +1,4 @@
-$(document).on('ready turbolinks:load', function() {
+$(document).on('ready', function() {
     $('.datepicker').datepicker({
         closeOnSelect: true,
         format: 'dd/mm/yy',
@@ -18,7 +18,7 @@ $(document).on('ready turbolinks:load', function() {
     });
 });
 
-$(document).on('ready turbolinks:load', function() {
+$(document).on('ready', function() {
     $('.timepicker').timepicker({
         closeOnSelect: true,
         i18n: {
@@ -31,13 +31,3 @@ $(document).on('ready turbolinks:load', function() {
         vibrate: true, // vibrate the device when dragging clock hand
     });
 });
-
-// $(document).on('ready turbolinks:load', function() {
-//     $('.datepicker').on( 'keyup', function(e) {
-//         $('.datepicker').click();
-//     } );
-
-//     $('.timepicker').on( 'keyup', function(e) {
-//         $('.timepicker').click();
-//     } );
-// });

@@ -1,9 +1,10 @@
-$(document).on('ready turbolinks:load', function() {
+$(document).on('ready', function() {
   elem = document.querySelector('#slide-out');
   instance = new M.Sidenav(elem, {});
+  instance.sideNav();
 });
 
-$(document).on('ready turbolinks:before-visit', function() {
+$(document).on('ready', function() {
   elem = document.querySelector('#slide-out');
   instance = M.Sidenav.getInstance(elem);
   instance.destroy();
