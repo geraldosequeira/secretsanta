@@ -1,12 +1,12 @@
 <div class="container">
 
-  <h2>Sign up</h2>
+  <h2>Crie sua conta</h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
 
     <div class="field">
-      <%= f.label :name %><br />
+      <%= f.label :name, "Nome" %><br />
       <%= f.text_field :name, autofocus: true %>
     </div>
 
@@ -16,20 +16,20 @@
     </div>
 
     <div class="field">
-      <%= f.label :password %>
+      <%= f.label :password, "Senha" %>
       <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <em> Mínimo de (<%= @minimum_password_length %> caracteres)</em>
       <% end %><br />
       <%= f.password_field :password, autocomplete: "off" %>
     </div>
 
     <div class="field">
-      <%= f.label :password_confirmation %><br />
+      <%= f.label :password_confirmation, "Confirmação da senha" %><br />
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
     </div>
 
     <div class="actions">
-      <button class="btn waves-effect waves-light" type="submit" name="action">Sign Up
+      <button class="btn waves-effect waves-light" type="submit" name="action">Cadastrar
         <i class="material-icons right">send</i>
       </button>
     </div>
