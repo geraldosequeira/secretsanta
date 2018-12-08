@@ -16,13 +16,15 @@ gem 'redis'
 gem 'sidekiq'
 
 gem 'coffee-rails', '~> 4.2'
-gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'materialize-sass'
 gem 'material_icons'
 
 gem 'bootsnap', '>= 1.1.0', require: false
+
+gem 'inky-rb', require: 'inky'
+gem 'premailer-rails'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5' 
