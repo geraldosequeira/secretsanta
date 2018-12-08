@@ -2,8 +2,7 @@ class CampaignRaffleJob < ApplicationJob
   queue_as :emails
 
   def perform(campaign)
-
-    RaffleService.new(campaign).call
+    results = RaffleService.new(campaign).call
     campaign.members.each {|m| m.set_pixel}
     
     results.each do |r|
@@ -11,5 +10,10 @@ class CampaignRaffleJob < ApplicationJob
     end
     
     campaign.update(status: :finished)
+    
+    #if results == false
+      # Send mail to owner of campaign
+    #end
   end
+
 end

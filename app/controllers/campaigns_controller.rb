@@ -32,17 +32,13 @@ class CampaignsController < ApplicationController
     end
   
     def destroy
-      if @campaign.destroy
-        render json: true
-        redirect_to root_path
-      else
-        render json: @campaign.errors, status: :unprocessable_entity
-      end
+      @campaign.destroy
+      render json: true
     end
   
     def raffle
       if @campaign.status != "pending"
-        render json: 'Já foi sorteada', status: :unprocessable_entity
+         render json: 'Já foi sorteada', status: :unprocessable_entity
       elsif @campaign.members.count < 3
         render json: 'A campanha precisa de pelo menos 3 pessoas', status: :unprocessable_entity
       else
