@@ -35,7 +35,7 @@
       <p class="text-center">Seu amigo secreto é:&nbsp;<b><u><%= @friend.name %></u></b></p>
       <spacer size="8"></spacer>
       <center>
-        <button href="" class="" >Crie sua campanha também</button>
+        <button href="" class="" >Quer criar um amigo secreto ?</button>
       </center>
     </columns>
   </row>
@@ -51,7 +51,7 @@
 
     <row>
       <columns large="6">
-        <button class="facebook expand" href="">Facebook</button>
+        <button class="facebook expand" href="https://www.linkedin.com/in/geraldo-sequeira">Linkedin</button>
       </columns>
       <columns large="6">
         <button class="twitter expand" href="">Twitter</button>
