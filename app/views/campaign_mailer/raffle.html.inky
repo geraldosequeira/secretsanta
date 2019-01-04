@@ -6,7 +6,7 @@
       <columns large="2">
       </columns>
       <columns large="1" class="center">
-        <img src="http://localhost:3000/assets/logo.png" alt="">
+        <img src="165.227.125.238/public/assets/logo-c644389c98d7a431a5db754c47fa93f3a82e7b9d2d413466328dea179f4d9995.png" alt="">
       </columns>
       <columns large="8">
         <h4>Nosso Amigo Secreto</h4>
@@ -30,33 +30,24 @@
   <row>
     <columns>
       <spacer size="4"></spacer>
-      <p class="text-center">Olá <%= @member.name %>, <%= @campaign.user.name %> criou uma campanha de amigo secreto no site Nosso Amigo Secreto e incluiu você. Logo a baixo você pode saber quem é seu amigo secreto.</p>
+      <p class="text-center">Olá <%= @member.name %>, <%= @campaign.user.name %> criou uma campanha de amigo secreto e incluiu você. Logo a baixo você pode saber quem é seu amigo secreto.</p>
       <spacer size="8"></spacer>
       <p class="text-center">Seu amigo secreto é:&nbsp;<b><u><%= @friend.name %></u></b></p>
       <spacer size="8"></spacer>
       <center>
-        <button href="" class="" >Quer criar um amigo secreto ?</button>
+        <button href="http://165.227.125.238" class="" >Quer criar um amigo secreto ?</button>
       </center>
     </columns>
   </row>
-
 
   <wrapper class="secondary">
 
     <spacer size="16"></spacer>
 
     <row>
-      <h5 class="text-center">Se conecte com a gente</h5>
+      <h6 class="text-center"><a href="https://www.linkedin.com/in/geraldo-sequeira-29574992/?trk=public_profile_card_url&originalSubdomain=br">Se conecte com a gente</a></h6>
     </row>
 
-    <row>
-      <columns large="6">
-        <button class="facebook expand" href="https://www.linkedin.com/in/geraldo-sequeira">Linkedin</button>
-      </columns>
-      <columns large="6">
-        <button class="twitter expand" href="">Twitter</button>
-      </columns>
-    </row>
   </wrapper>
 
   <wrapper class="secondary">
