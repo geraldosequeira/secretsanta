@@ -1,24 +1,16 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+![Chat Preview](https://drive.google.com/open?id=1PuNK8vRMZntPQSxMm9O26KFDd_4DPMp-)
 
-* System dependencies
 
-* Configuration
+![Chat Preview](https://drive.google.com/open?id=1zfNBXflbyhzv7dFRNYwlpv33cb19fwWq)
 
-* Database creation
 
-* Database initialization
+![Chat Preview](https://drive.google.com/open?id=1lmMQeerSo66iDJcdAoAL3coI42Fn0YWw)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+![Chat Preview](https://drive.google.com/open?id=1OvzHxqwu3WxfZNC4OlPSnWhO467zQVCl)
 
-* Deployment instructions
 
-* ...
+![Chat Preview](https://drive.google.com/open?id=1R9rXlSXz7SlnaABYwWlI_myrL3pj7jmC)
